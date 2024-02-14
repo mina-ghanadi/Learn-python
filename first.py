@@ -13,3 +13,33 @@ for x in txt:
     if x=="a":
         i+=1
 print(i)
+
+#Define a simple shop
+goods={
+    "Shirt":28,
+    "Coat":90,
+    "Glass":24,
+    "Scarf":12,
+    "Shoes":15
+}
+def ordergood():
+   order=input("What do you want to buy?(Shirt,Coat,Glass,Scarf,Shoes)")
+   if order in goods:
+    price="The {} is {} Dollars."
+    print(price.format(order,goods[order]))
+    want=input("Do you want it or not?Y,N  ")
+    if want=="Y":
+        print("Great,Send me Email")
+        another1=input("Do you want Another goods?Y,N  ")
+        if another1=="Y":
+          ordergood()
+        else:
+          print("OK,Maybe next time")
+    elif want=="N":
+       another=input("Do you want Another goods?Y,N  ")
+       if another=="Y":
+          ordergood()
+       else:
+          print("OK,Maybe next time")
+
+ordergood()
