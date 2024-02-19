@@ -21,4 +21,7 @@ for y in range(l1+5):
  print(x)
  if "-" not in x:
     break
-print("well done")
+if "-" not in x:
+   print("well done, You Win")
+else:
+   print("You Loose")
