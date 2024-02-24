@@ -30,3 +30,8 @@ def f3(n):
 
 print("n! is ",f3(5))
 
+
+
+# Call a module
+import module1
+module1.f1("jack",34)
